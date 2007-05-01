@@ -2,7 +2,7 @@
 
 Summary:	IO::Interface - Perl extension for access to network card configuration information
 Name:		perl-%{real_name}
-Version:	0.98
+Version:	1.03
 Release:	%mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl
