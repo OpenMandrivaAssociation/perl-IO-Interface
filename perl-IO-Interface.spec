@@ -1,15 +1,18 @@
-%define real_name IO-Interface
+%define upstream_name    IO-Interface
+%define upstream_version 1.05
+
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	%mkrel 1
 
 Summary:	IO::Interface - Perl extension for access to network card configuration information
-Name:		perl-%{real_name}
-Version:	1.05
-Release:	%mkrel 2
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{real_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/L/LD/LDS/%{real_name}-%{version}.tar.bz2
+URL:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://search.cpan.org/CPAN/authors/id/L/LD/LDS/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 IO::Interface adds methods to IO::Socket objects that allows them to
@@ -18,7 +21,7 @@ interfaces on your system.  In addition to the object-oriented access
 methods, you can use a function-oriented style.
 
 %prep
-%setup -q -n %{real_name}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -39,4 +42,3 @@ rm -rf %{buildroot}
 %{perl_vendorlib}/*/auto/IO/Interface/*
 %{perl_vendorlib}/*/IO/*
 %{_mandir}/*/*
-
