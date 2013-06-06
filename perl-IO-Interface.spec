@@ -1,18 +1,16 @@
 %define upstream_name    IO-Interface
-%define upstream_version 1.05
-
+%define upstream_version 1.06
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%perl_convert_version 1.06
+Release:	1
 
-Summary:	IO::Interface - Perl extension for access to network card configuration information
+Summary:	Perl extension for access to network card configuration information
 License:	GPL+ or Artistic
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/L/LD/LDS/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	http://search.cpan.org/CPAN/authors/id/L/LD/LDS/IO-Interface-1.06.tar.gz
 
 BuildRequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 IO::Interface adds methods to IO::Socket objects that allows them to
@@ -29,14 +27,9 @@ methods, you can use a function-oriented style.
 make test
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
-%clean 
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %doc Changes README
 %dir %{perl_vendorlib}/*/auto/IO/Interface
 %{perl_vendorlib}/*/auto/IO/Interface/*
@@ -90,4 +83,5 @@ rm -rf %{buildroot}
 
 * Thu Jul 14 2005 Oden Eriksson <oeriksson@mandriva.com> 0.98-1mdk
 - initial Mandriva package
+
 
