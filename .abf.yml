@@ -1,4 +1,5 @@
 removed_sources:
   IO-Interface-1.05.tar.bz2: d6a6e3dd711a7b5c6c4fba6e21900becb08300b2
-sources:
   IO-Interface-1.06.tar.gz: d775e8403487ca3ad86af9db3984ad19b0c0c997
+sources:
+  IO-Interface-1.07.tar.gz: c1a823bf135cc7ea999ef44fab80020b92113d62
