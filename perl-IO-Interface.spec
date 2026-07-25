@@ -1,14 +1,14 @@
 %define upstream_name    IO-Interface
-%define upstream_version 1.07
+%define upstream_version 1.09
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Perl extension for access to network card configuration information
 License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/L/LD/LDS/%{upstream_name}-%{upstream_version}.tar.gz
+URL:		https://metacpan.org/dist/IO-Interface
+Source0:	https://cpan.metacpan.org/authors/id/L/LD/LDS/IO-Interface-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
