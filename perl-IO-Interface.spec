@@ -1,14 +1,13 @@
 %define upstream_name    IO-Interface
-%define upstream_version 1.09
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	1.09
+Release:	2
 
 Summary:	Perl extension for access to network card configuration information
 License:	GPL+ or Artistic
 Group:		Development/Perl
 URL:		https://metacpan.org/dist/IO-Interface
-Source0:	https://cpan.metacpan.org/authors/id/L/LD/LDS/IO-Interface-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/L/LD/LDS/IO-Interface-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -20,7 +19,7 @@ interfaces on your system.  In addition to the object-oriented access
 methods, you can use a function-oriented style.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
